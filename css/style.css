@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/*FONTS*/
+/*Пример*/
+@font-face {
+    font-family: "Formular";
+    src: url("../fonts/Formular-BlackItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Lato";
+    font-weight: 400;
+    src: url("/fonts/lato-v23-latin-regular.woff2") format("woff2"); /* Super Modern Browsers */
+}
+/* lato-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Lato";
+    font-weight: 700;
+    src: url("/fonts/lato-v23-latin-700.woff2") format("woff2"); /* Super Modern Browsers */
+}
+/* lato-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Lato";
+    font-weight: 900;
+    src: url("/fonts/lato-v23-latin-900.woff2") format("woff2"); /* Super Modern Browsers */
+}

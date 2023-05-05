@@ -10,30 +10,261 @@
 /*FONTS*/
 /*Пример*/
 @font-face {
-    font-family: "Formular";
-    src: url("../fonts/Formular-BlackItalic.woff2") format("woff2");
-    font-weight: 900;
-    font-style: italic;
+    font-family: "Ninuto";
+    src: url("../font/Nunito-Regular.woff2") format("woff2");
+    font-weight: 500;
     font-display: swap;
 }
-/* lato-regular - latin */
+
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Lato";
-    font-weight: 400;
-    src: url("/fonts/lato-v23-latin-regular.woff2") format("woff2"); /* Super Modern Browsers */
+    font-display: swap; 
+    font-family: "Ninuto";
+    font-weight: 600;
+    src: url("../font/Nunito-SemiBold.woff2") format("woff2"); 
 }
-/* lato-700 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Lato";
-    font-weight: 700;
-    src: url("/fonts/lato-v23-latin-700.woff2") format("woff2"); /* Super Modern Browsers */
+    font-display: swap; 
+    font-family: "Ninuto";
+    font-weight:700;
+    src: url("../font/Nunito-Bold.woff2") format("woff2"); 
 }
-/* lato-900 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Lato";
+    font-display: swap; 
+    font-family: "Ninuto";
     font-weight: 900;
-    src: url("/fonts/lato-v23-latin-900.woff2") format("woff2"); /* Super Modern Browsers */
+    src: url("../font/Nunito-ExtraBold.woff2") format("woff2"); 
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "Manrope";
+    font-weight: 700;
+    src: url("../font/Manrope-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: url("../font/Montserrat-SemiBold.woff2") format("woff2");
+}
+
+body {
+    min-width: 320px;
+    margin: 0 auto;
+	background: gray;
+}
+
+header{
+	height: 150px;
+}
+.block_name {
+    font: 600 28px/34px "Lato", sans-serif;
+    text-align: center;
+}
+.title {
+    font: 700 18px/22px "Lato", sans-serif;
+    margin-bottom: 20px;
+}
+.header-block {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    padding: 32px 20px;
+    justify-content: space-between;
+}
+.header-active {
+    position: absolute;
+    width: 100%;
+    height: 375px;
+	margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.header-logo {
+    background: url("/svg/logo.svg") no-repeat;
+    width: 172px;
+	height: 43px;
+	position: absolute;
+	left: 20px;
+	top: 30px;
+}
+
+.header-link {
+    color: white;
+    font: 400 14px/17px "Lato", sans-serif;
+    position: relative;
+    text-transform: uppercase;
+}
+.header-link::after {
+    content: "";
+    border-bottom: 1px solid white;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.header-link:hover:after {
+    opacity: 1;
+    bottom: 0;
+}
+nav {
+    display: none;
+}
+.header-nav.active {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+.header-nav.active a {
+    color: black;
+    margin-bottom: 25px;
+}
+.user{
+	position: absolute;
+	right: 70px;
+	top: 25px;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 400 14px/17px "Lato", sans-serif;
+    display: none;
+}
+.container-active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+.cs-selector {
+    width: 50px;
+    height: 32px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cs-selector[data-selected="1"] .cs-options-list .cs-option:nth-child(2) {
+    background-color: white;
+}
+.cs-selector[data-selected="2"] .cs-options-list .cs-option:nth-child(3) {
+    background-color: white;
+}
+
+.cs-selector-icon {
+    background: url("../svg/arrowdark.svg");
+    transition: 0.3s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+}
+.cs-selector[data-active="1"] .cs-selector-icon {
+    transform: rotateZ(180deg);
+}
+.cs-selector[data-active="1"] .cs-options-list {
+    display: block;
+    -webkit-animation: fadeIn;
+    animation: fadeIn;
+    background: white;
+    padding: 14px 11px 10px;
+}
+.cs-selector[data-active="0"] .cs-options-list,
+.cs-selector select {
+    display: none;
+}
+.cs-selector .cs-selected-box {
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cs-selector .cs-selector-icon {
+    width: 30px;
+    height: 30px;
+}
+.cs-selector .cs-selector-icon svg {
+    width: 100%;
+    height: auto;
+}
+.cs-selector .cs-options-list {
+    border: 0.5px solid #f8e4e4;
+    list-style: none;
+    position: absolute;
+    border-radius: 7px;
+    overflow: hidden;
+    text-align: center;
+}
+.cs-selector .cs-selector-label {
+    display: none;
+}
+.cs-selector .cs-option {
+    color: black;
+    transition: 0.2s ease;
+    font-weight: 400;
+    border-bottom: 1px solid #f8e4e4;
+    margin-bottom: 8px;
+}
+
+.burger {
+    background: url("../svg/Burger.svg") no-repeat;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.burger-active {
+    background: url("../svg/close.svg") no-repeat;
+    
+}
+
+@media (min-width: 991px) {
+    body {
+        width: 100%;
+    }
+	.burger {
+        display: none;
+    }
+    .header-nav {
+        display: flex;
+		margin-left: 100px;
+    }
+	.header-block {
+        margin: 0 auto;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 15%;
+    }
+    .container {
+        position: relative;
+        display: block;
+    }
+    .header-link {
+        margin: 7px 12px;
+        font: 400 14px/17px "Lato", sans-serif;
+    }
+    .header-link:hover {
+        text-shadow: 0 0 0.65px white, 0 0 0.65px white;
+    }
+    .cs-selector-icon {
+        background: url("../svg/arrowwhite.svg");
+    }
+    .cs-selected-option {
+        color: white;
+        font: 700 14px/17px "Lato", sans-serif;
+    }
+    .cs-options-list :hover {
+        color: red;
+    }
 }

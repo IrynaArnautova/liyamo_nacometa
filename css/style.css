@@ -10,43 +10,43 @@
 /*FONTS*/
 /*Пример*/
 @font-face {
-    font-family: "Ninuto";
-    src: url("../font/Nunito-Regular.woff2") format("woff2");
+    font-family: "Ninuto", sans-serif;
+    src: url("/font/Nunito-Regular.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
 }
 
 @font-face {
     font-display: swap; 
-    font-family: "Ninuto";
+    font-family: "Nunito", sans-serif;
     font-weight: 600;
-    src: url("../font/Nunito-SemiBold.woff2") format("woff2"); 
+    src: url("/font/Nunito-SemiBold.woff2") format("woff2"); 
 }
 @font-face {
     font-display: swap; 
-    font-family: "Ninuto";
+    font-family: "Nunito", sans-serif;
     font-weight:700;
-    src: url("../font/Nunito-Bold.woff2") format("woff2"); 
+    src: url("/font/Nunito-Bold.woff2") format("woff2"); 
 }
 @font-face {
     font-display: swap; 
-    font-family: "Ninuto";
+    font-family: "Nunito", sans-serif;
     font-weight: 900;
-    src: url("../font/Nunito-ExtraBold.woff2") format("woff2"); 
+    src: url("/font/Nunito-ExtraBold.woff2") format("woff2"); 
 }
 
 @font-face {
     font-display: swap; 
-    font-family: "Manrope";
+    font-family: "Manrope", sans-serif;
     font-weight: 700;
-    src: url("../font/Manrope-Bold.woff2") format("woff2");
+    src: url("/font/Manrope-Bold.woff2") format("woff2");
 }
 
 @font-face {
     font-display: swap; 
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    src: url("../font/Montserrat-SemiBold.woff2") format("woff2");
+    src: url("/font/Montserrat-SemiBold.woff2") format("woff2");
 }
 
 body {
@@ -95,13 +95,12 @@ header{
 
 .header-link {
     color: white;
-    font: 400 14px/17px "Lato", sans-serif;
+    font: 700 18px/22px "Nunito", sans-serif;
     position: relative;
-    text-transform: uppercase;
 }
 .header-link::after {
     content: "";
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid orange;
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -124,7 +123,7 @@ nav {
 }
 .header-nav.active a {
     color: black;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 .user{
 	position: absolute;
@@ -136,7 +135,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: 400 14px/17px "Lato", sans-serif;
+    font: 600 14px/24px "Nunito", sans-serif;
     display: none;
 }
 .container-active {
@@ -146,14 +145,17 @@ nav {
     margin-top: 8px;
 }
 .cs-selector {
-    width: 50px;
-    height: 32px;
+    width: 140px;
+    height: 44px;
     padding-bottom: 5px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 12px;
 }
 .cs-selector[data-selected="1"] .cs-options-list .cs-option:nth-child(2) {
     background-color: white;
@@ -163,7 +165,7 @@ nav {
 }
 
 .cs-selector-icon {
-    background: url("../svg/arrowdark.svg");
+    background: url("../svg/arrowselectorlang.svg") no-repeat;
     transition: 0.3s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
 }
 .cs-selector[data-active="1"] .cs-selector-icon {
@@ -174,7 +176,6 @@ nav {
     -webkit-animation: fadeIn;
     animation: fadeIn;
     background: white;
-    padding: 14px 11px 10px;
 }
 .cs-selector[data-active="0"] .cs-options-list,
 .cs-selector select {
@@ -189,20 +190,20 @@ nav {
     align-items: center;
 }
 .cs-selector .cs-selector-icon {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
 }
 .cs-selector .cs-selector-icon svg {
     width: 100%;
     height: auto;
 }
 .cs-selector .cs-options-list {
+	width: 117px;
     border: 0.5px solid #f8e4e4;
     list-style: none;
     position: absolute;
     border-radius: 7px;
     overflow: hidden;
-    text-align: center;
 }
 .cs-selector .cs-selector-label {
     display: none;
@@ -210,9 +211,8 @@ nav {
 .cs-selector .cs-option {
     color: black;
     transition: 0.2s ease;
-    font-weight: 400;
-    border-bottom: 1px solid #f8e4e4;
-    margin-bottom: 8px;
+	padding: 10px;
+	font: 600 14px/24px "Montserrat", sans-serif;
 }
 
 .burger {
@@ -239,12 +239,14 @@ nav {
     .header-nav {
         display: flex;
 		margin-left: 100px;
+		justify-content: center;
+		align-items: center;
     }
 	.header-block {
         margin: 0 auto;
-        justify-content: space-between;
-        padding-left: 10%;
-        padding-right: 15%;
+        padding-right: 10%;
+		padding-left: 10%;
+		justify-content: center;
     }
     .container {
         position: relative;
@@ -252,13 +254,16 @@ nav {
     }
     .header-link {
         margin: 7px 12px;
-        font: 400 14px/17px "Lato", sans-serif;
+        font: 700 18px/22px "Nunito", sans-serif;
     }
     .header-link:hover {
         text-shadow: 0 0 0.65px white, 0 0 0.65px white;
     }
+	.cs-selector{
+		border: 1px solid white;
+	}
     .cs-selector-icon {
-        background: url("../svg/arrowwhite.svg");
+        background: url("../svg/arrowlangdt.svg") no-repeat;
     }
     .cs-selected-option {
         color: white;
@@ -267,4 +272,11 @@ nav {
     .cs-options-list :hover {
         color: red;
     }
+	.user{
+		margin-top: 7px;
+		right: 5%;
+	}
+	.header-logo{
+		margin-left: 3%;
+	}
 }

@@ -52,7 +52,7 @@
 body {
     min-width: 320px;
     margin: 0 auto;
-	background: gray;
+	background: red;
 }
 
 header{
@@ -83,6 +83,8 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+	background: #FFFFFF;
+	opacity: 0.7;
 }
 .header-logo {
     background: url("/svg/logo.svg") no-repeat;
@@ -97,16 +99,18 @@ header{
     color: white;
     font: 700 18px/22px "Nunito", sans-serif;
     position: relative;
+	letter-spacing: 0.1px;
 }
 .header-link::after {
     content: "";
-    border-bottom: 1px solid orange;
+    border-bottom: 2px solid orange;
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 0;
     width: 100%;
     opacity: 0;
     transition: all 0.3s linear;
+	margin-bottom: -5px;
 }
 .header-link:hover:after {
     opacity: 1;
@@ -123,7 +127,7 @@ nav {
 }
 .header-nav.active a {
     color: black;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 .user{
 	position: absolute;
@@ -137,12 +141,12 @@ nav {
     transform: translate(-50%, -50%);
     font: 600 14px/24px "Nunito", sans-serif;
     display: none;
+	
 }
 .container-active {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 8px;
 }
 .cs-selector {
     width: 140px;
@@ -259,6 +263,9 @@ nav {
     .header-link:hover {
         text-shadow: 0 0 0.65px white, 0 0 0.65px white;
     }
+	.header-lang{
+		margin-left: 40px;
+	}
 	.cs-selector{
 		border: 1px solid white;
 	}
@@ -267,7 +274,8 @@ nav {
     }
     .cs-selected-option {
         color: white;
-        font: 700 14px/17px "Lato", sans-serif;
+        font: 600 14px/24px "Nunito", sans-serif;
+		letter-spacing: 0.2px;
     }
     .cs-options-list :hover {
         color: red;

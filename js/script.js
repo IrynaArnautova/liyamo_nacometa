@@ -25,7 +25,6 @@ selectors.forEach(selector => {
 		let icon_container = newElement("div", { class: 'cs-selector-icon' }, '');
 		let selected_option = newElement("div", { class: 'cs-selected-option' }, selector.options[selector.selectedIndex].text);
 		let wrapper = newElement("div", { class: "cs-selected-box" });
-
 		wrapper.appendChild(selected_option);
 		wrapper.appendChild(icon_container);
 
@@ -83,9 +82,9 @@ selectors.forEach(selector => {
 });
 
 const burger = document.querySelector('.js-burger');
-const nav = document.querySelector('.header-nav')
-const logo = document.querySelector('.header-logo')
-const header = document.querySelector('.header-block')
+const nav = document.querySelector('.header_nav')
+const logo = document.querySelector('.header_logo')
+const header = document.querySelector('.header_block')
 const lang = document.querySelector('.container')
 burger.addEventListener('click', () => {
 	burger.classList.toggle('burger-active')

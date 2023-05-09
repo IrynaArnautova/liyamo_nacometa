@@ -1,94 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    outline: 0;
-    box-sizing: border-box;
-    border: 0;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	outline: 0;
+	box-sizing: border-box;
+	border: 0;
 }
 
-/*FONTS*/
-/*Пример*/
-@font-face {
-    font-family: "Ninuto", sans-serif;
-    src: url("/font/Nunito-Regular.woff2") format("woff2");
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-display: swap; 
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    src: url("/font/Nunito-SemiBold.woff2") format("woff2"); 
-}
-@font-face {
-    font-display: swap; 
-    font-family: "Nunito", sans-serif;
-    font-weight:700;
-    src: url("/font/Nunito-Bold.woff2") format("woff2"); 
-}
-@font-face {
-    font-display: swap; 
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    src: url("/font/Nunito-ExtraBold.woff2") format("woff2"); 
-}
-
-@font-face {
-    font-display: swap; 
-    font-family: "Manrope", sans-serif;
-    font-weight: 700;
-    src: url("/font/Manrope-Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap; 
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    src: url("/font/Montserrat-SemiBold.woff2") format("woff2");
-}
 
 body {
-    min-width: 320px;
-    margin: 0 auto;
+	min-width: 320px;
+	margin: 0 auto;
 	background: red;
 }
 
-header{
+header {
 	height: 150px;
 }
-.block_name {
-    font: 600 28px/34px "Lato", sans-serif;
-    text-align: center;
-}
-.title {
-    font: 700 18px/22px "Lato", sans-serif;
-    margin-bottom: 20px;
-}
-.header-block {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    display: flex;
-    padding: 32px 20px;
-    justify-content: space-between;
+
+.header_block {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display: flex;
+	padding: 32px 20px;
+	justify-content: space-between;
 }
 .header-active {
-    position: absolute;
-    width: 100%;
-    height: 375px;
+	position: absolute;
+	width: 100%;
+	height: 375px;
 	margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-	background: #FFFFFF;
+	flex-direction: column;
+	justify-content: flex-start;
+	background: #ffffff;
 	opacity: 0.7;
 }
-.header-logo {
-    background: url("/svg/logo.svg") no-repeat;
-    width: 172px;
+.header_logo {
+	background: url("../svg/logo.svg") no-repeat;
+	width: 172px;
 	height: 43px;
 	position: absolute;
 	left: 20px;
@@ -96,195 +47,254 @@ header{
 }
 
 .header-link {
-    color: white;
-    font: 700 18px/22px "Nunito", sans-serif;
-    position: relative;
+	color: white;
+	font: 700 18px/22px "Nunito", sans-serif;
+	position: relative;
 	letter-spacing: 0.1px;
 }
 .header-link::after {
-    content: "";
-    border-bottom: 2px solid orange;
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.3s linear;
+	content: "";
+	border-bottom: 2px solid orange;
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.3s linear;
 	margin-bottom: -5px;
 }
 .header-link:hover:after {
-    opacity: 1;
-    bottom: 0;
+	opacity: 1;
+	bottom: 0;
 }
-nav {
-    display: none;
+.header_nav {
+	display: none;
 }
-.header-nav.active {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
+.header_nav.active {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.header-nav.active a {
-    color: black;
-    margin-bottom: 25px;
+.header_nav.active a {
+	color: black;
+	margin-bottom: 25px;
 }
-.user{
+.user {
 	position: absolute;
 	right: 70px;
 	top: 25px;
 }
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font: 600 14px/24px "Nunito", sans-serif;
-    display: none;
-	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font: 600 14px/24px "Nunito", sans-serif;
+	display: none;
 }
 .container-active {
-    position: relative;
-    display: flex;
-    justify-content: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
 }
 .cs-selector {
-    width: 140px;
-    height: 44px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	width: 140px;
+	height: 44px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 12px;
 }
 .cs-selector[data-selected="1"] .cs-options-list .cs-option:nth-child(2) {
-    background-color: white;
+	background-color: white;
 }
 .cs-selector[data-selected="2"] .cs-options-list .cs-option:nth-child(3) {
-    background-color: white;
+	background-color: white;
 }
 
 .cs-selector-icon {
-    background: url("../svg/arrowselectorlang.svg") no-repeat;
-    transition: 0.3s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
+	background: url("../svg/arrowselectorlang.svg") no-repeat;
+	transition: 0.3s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
 }
 .cs-selector[data-active="1"] .cs-selector-icon {
-    transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
 }
 .cs-selector[data-active="1"] .cs-options-list {
-    display: block;
-    -webkit-animation: fadeIn;
-    animation: fadeIn;
-    background: white;
+	display: block;
+	-webkit-animation: fadeIn;
+	animation: fadeIn;
+	background: white;
 }
 .cs-selector[data-active="0"] .cs-options-list,
 .cs-selector select {
-    display: none;
+	display: none;
 }
 .cs-selector .cs-selected-box {
-    color: black;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	color: black;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 .cs-selector .cs-selector-icon {
-    width: 10px;
-    height: 10px;
+	width: 10px;
+	height: 10px;
 }
 .cs-selector .cs-selector-icon svg {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 .cs-selector .cs-options-list {
 	width: 117px;
-    border: 0.5px solid #f8e4e4;
-    list-style: none;
-    position: absolute;
-    border-radius: 7px;
-    overflow: hidden;
+	border: 0.5px solid #f8e4e4;
+	list-style: none;
+	position: absolute;
+	border-radius: 7px;
+	overflow: hidden;
 }
 .cs-selector .cs-selector-label {
-    display: none;
+	display: none;
 }
 .cs-selector .cs-option {
-    color: black;
-    transition: 0.2s ease;
+	color: black;
+	transition: 0.2s ease;
 	padding: 10px;
 	font: 600 14px/24px "Montserrat", sans-serif;
 }
 
 .burger {
-    background: url("../svg/Burger.svg") no-repeat;
 	width: 40px;
 	height: 40px;
 	position: absolute;
-    top: 25px;
-    right: 25px;
+	top: 25px;
+	right: 25px;
+	border-radius: 4px;
+	z-index: 10;
+}
+.burger span {
+	position: relative;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -1.5px;
+}
+.burger span,
+.burger span::before,
+.burger span::after {
+	display: block;
+	width: 25px;
+	height: 1px;
+	background-color: white;
+	outline: 1px solid transparent;
+	-webkit-transition-property: background-color, -webkit-transform;
+	-moz-transition-property: background-color, -moz-transform;
+	-o-transition-property: background-color, -o-transform;
+	transition-property: background-color, transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.burger span::before,
+.burger span::after {
+	position: absolute;
+	content: "";
+}
+.burger span::before {
+	top: -9px;
+}
+.burger span::after {
+	top: 9px;
+}
+.burger-active span {
+	background-color: transparent;
 }
 
-.burger-active {
-    background: url("../svg/close.svg") no-repeat;
-    
+.burger-active span::before {
+	-webkit-transform: translateY(9px) rotate(45deg);
+	-moz-transform: translateY(9px) rotate(45deg);
+	-ms-transform: translateY(9px) rotate(45deg);
+	-o-transform: translateY(9px) rotate(45deg);
+	transform: translateY(9px) rotate(45deg);
+}
+.burger-active span::after {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+	-moz-transform: translateY(-9px) rotate(-45deg);
+	-ms-transform: translateY(-9px) rotate(-45deg);
+	-o-transform: translateY(-9px) rotate(-45deg);
+	transform: translateY(-9px) rotate(-45deg);
+}
+.burger-active span:before,
+.burger-active span:after {
+	background-color: #ffffff;
+}
+
+.burger:hover {
+	cursor: pointer;
 }
 
 @media (min-width: 991px) {
-    body {
-        width: 100%;
-    }
+	body {
+		width: 100%;
+	}
 	.burger {
-        display: none;
-    }
-    .header-nav {
-        display: flex;
+		display: none;
+	}
+	.header_nav {
+		display: flex;
 		margin-left: 100px;
 		justify-content: center;
 		align-items: center;
-    }
-	.header-block {
-        margin: 0 auto;
-        padding-right: 10%;
+	}
+	.header_block {
+		margin: 0 auto;
+		padding-right: 10%;
 		padding-left: 10%;
 		justify-content: center;
-    }
-    .container {
-        position: relative;
-        display: block;
-    }
-    .header-link {
-        margin: 7px 12px;
-        font: 700 18px/22px "Nunito", sans-serif;
-    }
-    .header-link:hover {
-        text-shadow: 0 0 0.65px white, 0 0 0.65px white;
-    }
-	.header-lang{
+	}
+	.container {
+		position: relative;
+		display: block;
+	}
+	.header-link {
+		margin: 7px 15px;
+	}
+
+	.header_lang {
 		margin-left: 40px;
 	}
-	.cs-selector{
+	.cs-selector {
 		border: 1px solid white;
 	}
-    .cs-selector-icon {
-        background: url("../svg/arrowlangdt.svg") no-repeat;
-    }
-    .cs-selected-option {
-        color: white;
-        font: 600 14px/24px "Nunito", sans-serif;
+	.cs-selector-icon {
+		background: url("../svg/arrowlangdt.svg") no-repeat;
+	}
+	.cs-selected-option {
+		color: white;
+		font: 600 14px/24px "Nunito", sans-serif;
 		letter-spacing: 0.2px;
-    }
-    .cs-options-list :hover {
-        color: red;
-    }
-	.user{
+	}
+	.cs-options-list :hover {
+		color: red;
+	}
+	.user {
 		margin-top: 7px;
 		right: 5%;
 	}
-	.header-logo{
+	.header_logo {
 		margin-left: 3%;
 	}
 }

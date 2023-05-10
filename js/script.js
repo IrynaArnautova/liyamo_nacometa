@@ -1,95 +1,30 @@
-const newElement = function (element, attrs, content) {
-	let el = document.createElement(element);
-	for (var key in attrs) {
-		el.setAttribute(key, attrs[key]);
-	}
-	if (content) el.innerHTML = content;
-	return el;
-};
-const selectors = document.querySelectorAll("select");
+const selects = document.querySelectorAll('.js_select-btn');
+const options = document.querySelectorAll('.js_select-option');
 
-selectors.forEach(selector => {
-	let selectedOption = null;
-
-	let create_cs_selector = () => {
-		let el = document.createElement("div");
-		el.className = "cs-selector";
-		el.setAttribute("data-selected", selectedOption || selector.value);
-		el.setAttribute("data-active", 1);
-		el.setAttribute("aria-label", "select");
-		return el;
-	};
-	let cs_selector_DOM = create_cs_selector();
-
-	let create_cs_selected_box = () => {
-		let icon_container = newElement("div", { class: 'cs-selector-icon' }, '');
-		let selected_option = newElement("div", { class: 'cs-selected-option' }, selector.options[selector.selectedIndex].text);
-		let wrapper = newElement("div", { class: "cs-selected-box" });
-		wrapper.appendChild(selected_option);
-		wrapper.appendChild(icon_container);
-
-		return wrapper;
-	};
-	let cs_selected_box = create_cs_selected_box();
-
-	let create_cs_options = () => {
-		let options = selector.querySelectorAll("option");
-		let ul = newElement("ul", { class: "cs-options-list" });
-		options.forEach(option => {
-			let value = option.getAttribute("value"),
-				text = option.innerText;
-
-			let li = newElement("li", { class: "cs-options-list", "data-value": value }, text);
-
-			if (option.selected) selectedOption = value;
-			if (option.classList.contains("cs-selector-label"))
-				li.className = "cs-selector-label";
-			else
-				li.className = "cs-option";
-
-			li.addEventListener('click', e => {
-				e.stopPropagation();
-				cs_selected_box.childNodes[0].innerHTML = text;
-				cs_selector_DOM.setAttribute("data-active", 0);
-				cs_selector_DOM.setAttribute("data-selected", value);
-			});
-
-			ul.appendChild(li);
-		});
-
-		return ul;
-	};
-	let cs_options = create_cs_options();
-
-	cs_selector_DOM.appendChild(cs_selected_box);
-	cs_selector_DOM.appendChild(cs_options);
-	cs_selector_DOM.addEventListener("click", e => {
-		e.stopPropagation();
-
-		let _self = cs_selector_DOM,
-			active = _self.getAttribute("data-active");
-
-		if (active == 0) _self.setAttribute("data-active", 1);
-		else _self.setAttribute("data-active", 0);
-	});
-
-	document.addEventListener('click', e => {
-		cs_selector_DOM.setAttribute("data-active", 0);
-	});
-
-	selector.parentNode.insertBefore(cs_selector_DOM, selector);
-	selector.remove();
-});
+selects.forEach(select => {
+	select.addEventListener('click', item => {
+		const main = item.target.closest('.js_select');
+		main.classList.toggle('active');
+	})
+})
+options.forEach(option => {
+	option.addEventListener('click', item => {
+		const parentMain = item.target.closest('.js_select');
+		parentMain.classList.remove('active');
+		const text = parentMain.querySelector('.js_select-btn .base_dropdown-main-txt');
+		text.innerHTML = item.target.innerHTML;
+	})
+})
 
 const burger = document.querySelector('.js-burger');
 const nav = document.querySelector('.header_nav')
 const logo = document.querySelector('.header_logo')
 const header = document.querySelector('.header_block')
-const lang = document.querySelector('.container')
+const lang = document.querySelector('.base_dropdown')
 burger.addEventListener('click', () => {
 	burger.classList.toggle('burger-active')
 	nav.classList.toggle('active')
 	logo.classList.toggle('active-logo')
 	header.classList.toggle('header-active')
-	lang.classList.toggle('container-active')
+	lang.classList.toggle('base_dropdown-active')
 });

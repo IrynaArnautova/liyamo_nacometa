@@ -7,7 +7,6 @@
 	border: 0;
 }
 
-
 body {
 	min-width: 320px;
 	margin: 0 auto;
@@ -16,6 +15,8 @@ body {
 
 header {
 	height: 150px;
+	margin: 0 auto;
+	position: relative;
 }
 
 .header_block {
@@ -46,13 +47,13 @@ header {
 	top: 30px;
 }
 
-.header-link {
+.header_nav-link {
 	color: white;
 	font: 700 18px/22px "Nunito", sans-serif;
 	position: relative;
 	letter-spacing: 0.1px;
 }
-.header-link::after {
+.header_nav-link::after {
 	content: "";
 	border-bottom: 2px solid orange;
 	position: absolute;
@@ -63,7 +64,7 @@ header {
 	transition: all 0.3s linear;
 	margin-bottom: -5px;
 }
-.header-link:hover:after {
+.header_nav-link:hover:after {
 	opacity: 1;
 	bottom: 0;
 }
@@ -84,88 +85,58 @@ header {
 	right: 70px;
 	top: 25px;
 }
-.container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font: 600 14px/24px "Nunito", sans-serif;
+
+.base_dropdown {
+	position: relative;
+	width: 140px;
+	height: 44px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	border-radius: 5px;
 	display: none;
 }
-.container-active {
+.base_dropdown-active {
 	position: relative;
 	display: flex;
 	justify-content: center;
+	margin: 0 auto;
 }
-.cs-selector {
-	width: 140px;
-	height: 44px;
-	padding-bottom: 5px;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 12px;
+.base_dropdown-arrow {
+	background: url("/svg/arrowselectorlang.svg") no-repeat;
+	width: 15px;
+	height: 15px;
+	margin-top: 8px;
 }
-.cs-selector[data-selected="1"] .cs-options-list .cs-option:nth-child(2) {
-	background-color: white;
-}
-.cs-selector[data-selected="2"] .cs-options-list .cs-option:nth-child(3) {
-	background-color: white;
-}
-
-.cs-selector-icon {
-	background: url("../svg/arrowselectorlang.svg") no-repeat;
-	transition: 0.3s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
-}
-.cs-selector[data-active="1"] .cs-selector-icon {
-	transform: rotateZ(180deg);
-}
-.cs-selector[data-active="1"] .cs-options-list {
-	display: block;
-	-webkit-animation: fadeIn;
-	animation: fadeIn;
-	background: white;
-}
-.cs-selector[data-active="0"] .cs-options-list,
-.cs-selector select {
-	display: none;
-}
-.cs-selector .cs-selected-box {
-	color: black;
-	border-radius: 5px;
+.base_dropdown-main {
 	display: flex;
-	flex-direction: row;
+	width: 120px;
 	justify-content: space-between;
 	align-items: center;
+	font: 600 14px/24px "Nunito", sans-serif;
 }
-.cs-selector .cs-selector-icon {
-	width: 10px;
-	height: 10px;
-}
-.cs-selector .cs-selector-icon svg {
-	width: 100%;
-	height: auto;
-}
-.cs-selector .cs-options-list {
-	width: 117px;
-	border: 0.5px solid #f8e4e4;
-	list-style: none;
-	position: absolute;
-	border-radius: 7px;
-	overflow: hidden;
-}
-.cs-selector .cs-selector-label {
+.base_dropdown-list {
 	display: none;
-}
-.cs-selector .cs-option {
-	color: black;
-	transition: 0.2s ease;
+	background: #fff;
+	border-radius: 10px;
+	position: absolute;
+	top: 104%;
+	left: 50%;
+	transform: translateX(-50%);
 	padding: 10px;
+	text-transform: uppercase;
 	font: 600 14px/24px "Montserrat", sans-serif;
+	list-style: none;
+}
+.base_dropdown.active .base_dropdown-list {
+	display: block;
+}
+.base_dropdown-list-item:hover,
+.base_dropdown-list-item.active {
+	color: #ec0000;
+	transition: color 0.2s linear;
 }
 
 .burger {
@@ -250,51 +221,48 @@ header {
 	body {
 		width: 100%;
 	}
+	header {
+		max-width: 1200px;
+	}
 	.burger {
 		display: none;
 	}
 	.header_nav {
 		display: flex;
-		margin-left: 100px;
 		justify-content: center;
 		align-items: center;
 	}
 	.header_block {
-		margin: 0 auto;
-		padding-right: 10%;
-		padding-left: 10%;
 		justify-content: center;
-	}
-	.container {
+		width: 80%;
 		position: relative;
-		display: block;
+		margin-left: 200px;
 	}
-	.header-link {
+	
+	.header_nav-link {
 		margin: 7px 15px;
 	}
 
 	.header_lang {
-		margin-left: 40px;
+		margin-left: 25px;
 	}
-	.cs-selector {
+	.base_dropdown {
+		position: relative;
+		display: block;
 		border: 1px solid white;
-	}
-	.cs-selector-icon {
-		background: url("../svg/arrowlangdt.svg") no-repeat;
-	}
-	.cs-selected-option {
 		color: white;
+		padding: 10px;
+	}
+	.base_dropdown-list-item {
+		color: black;
 		font: 600 14px/24px "Nunito", sans-serif;
 		letter-spacing: 0.2px;
 	}
-	.cs-options-list :hover {
-		color: red;
+	.base_dropdown-arrow {
+		background: url("/svg/arrowlangdt.svg") no-repeat;
 	}
 	.user {
 		margin-top: 7px;
-		right: 5%;
-	}
-	.header_logo {
-		margin-left: 3%;
+		right: 0;
 	}
 }

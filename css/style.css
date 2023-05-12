@@ -88,12 +88,11 @@ header {
 
 .base_dropdown {
 	position: relative;
-	width: 140px;
+	width: 117px;
 	height: 44px;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	border: 1px solid black;
 	border-radius: 5px;
 	display: none;
@@ -101,23 +100,25 @@ header {
 .base_dropdown-active {
 	position: relative;
 	display: flex;
-	justify-content: center;
 	margin: 0 auto;
 }
 .base_dropdown-arrow {
-	background: url("/svg/arrowselectorlang.svg") no-repeat;
+	background: url("../svg/arrowselectorlang.svg") no-repeat;
 	width: 15px;
 	height: 15px;
 	margin-top: 8px;
 }
 .base_dropdown-main {
 	display: flex;
-	width: 120px;
 	justify-content: space-between;
 	align-items: center;
 	font: 600 14px/24px "Nunito", sans-serif;
+	margin: 0 auto;
+	width: 115px;
+	padding: 10px 8px;
 }
 .base_dropdown-list {
+	width: 117px;
 	display: none;
 	background: #fff;
 	border-radius: 10px;
@@ -126,7 +127,6 @@ header {
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 10px;
-	text-transform: uppercase;
 	font: 600 14px/24px "Montserrat", sans-serif;
 	list-style: none;
 }
@@ -251,7 +251,6 @@ header {
 		display: block;
 		border: 1px solid white;
 		color: white;
-		padding: 10px;
 	}
 	.base_dropdown-list-item {
 		color: black;
@@ -259,7 +258,7 @@ header {
 		letter-spacing: 0.2px;
 	}
 	.base_dropdown-arrow {
-		background: url("/svg/arrowlangdt.svg") no-repeat;
+		background: url("../svg/arrowlangdt.svg") no-repeat;
 	}
 	.user {
 		margin-top: 7px;

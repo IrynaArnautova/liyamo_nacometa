@@ -16,13 +16,13 @@ options.forEach(option => {
 	})
 })
 
-const burger = document.querySelector('.js-burger');
+const burger = document.querySelector('.header_js-burger');
 const nav = document.querySelector('.header_nav')
 const logo = document.querySelector('.header_logo')
 const header = document.querySelector('.header_block')
 const lang = document.querySelector('.base_dropdown')
 burger.addEventListener('click', () => {
-	burger.classList.toggle('burger-active')
+	burger.classList.toggle('header_burger-active')
 	nav.classList.toggle('active')
 	logo.classList.toggle('active-logo')
 	header.classList.toggle('header-active')

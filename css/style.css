@@ -79,7 +79,7 @@ header {
 	color: black;
 	margin-bottom: 25px;
 }
-.user {
+.header_user {
 	position: absolute;
 	right: 70px;
 	top: 25px;
@@ -140,7 +140,7 @@ header {
 	transition: color 0.2s linear;
 }
 
-.burger {
+.header_burger {
 	width: 40px;
 	height: 40px;
 	position: absolute;
@@ -149,7 +149,7 @@ header {
 	border-radius: 4px;
 	z-index: 10;
 }
-.burger span {
+.header_burger span {
 	margin-bottom: 8px;
 	user-select: none;
 	position: absolute;
@@ -158,44 +158,44 @@ header {
 	margin-left: -15px;
 	margin-top: -1.5px;
 }
-.burger span,
-.burger span::before,
-.burger span::after {
+.header_burger span,
+.header_burger span::before,
+.header_burger span::after {
 	display: block;
 	width: 25px;
 	height: 1px;
 	background-color: white;
 	outline: 1px solid transparent;
-	transition-property: background-color, transform;
+	transition: color 2s linear;
 	transition-duration: 0.3s;
 }
-.burger span::before,
-.burger span::after {
+.header_burger span::before,
+.header_burger span::after {
 	position: absolute;
 	content: "";
 }
-.burger span::before {
+.header_burger span::before {
 	top: -9px;
 }
-.burger span::after {
+.header_burger span::after {
 	top: 9px;
 }
-.burger-active span {
+.header_burger-active span {
 	background-color: transparent;
 }
 
-.burger-active span::before {
+.header_burger-active span::before {
 	transform: translateY(9px) rotate(45deg);
 }
-.burger-active span::after {
+.header_burger-active span::after {
 	transform: translateY(-9px) rotate(-45deg);
 }
-.burger-active span:before,
-.burger-active span:after {
+.header_burger-active span:before,
+.header_burger-active span:after {
 	background-color: #ffffff;
 }
 
-.burger:hover {
+.header_burger:hover {
 	cursor: pointer;
 }
 
@@ -206,7 +206,7 @@ header {
 	header {
 		max-width: 1000px;
 	}
-	.burger {
+	.header_burger {
 		display: none;
 	}
 	.header_nav {
@@ -243,7 +243,7 @@ header {
 		border:1px solid white;
 		border-width: 0 0 2px 2px;
 	}
-	.user {
+	.header_user {
 		top: 32px;
 		right: 0;
 	}

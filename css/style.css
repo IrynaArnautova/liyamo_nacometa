@@ -14,7 +14,7 @@ body {
 }
 
 header {
-	height: 150px;
+	height: 50px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 10;
@@ -203,13 +203,20 @@ main{
 	width: 100%;
 	min-width: 320px;
 }
-main::before{
+main::before {
+	content: "";
 	background:url(../img/main.jpg) center/cover no-repeat;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-width: 320px;
+	min-height: 330px;
 }
 .main_contain{
 	max-width: 1150px;
-	margin: 87px auto 8px;
+	margin: 33px auto 8px;
 	padding: 20px;
+	position: relative;
 }
 .main_title{
 	color: white;
@@ -297,9 +304,10 @@ main::before{
 	}
 	main::before{
 		background: url('../img/maindt.jpg') center / cover no-repeat;
+		min-height: 500px;
 	}
 	.main_contain{
-		margin: 134px auto 60px;
+		margin: 74px auto 60px;
 	}
 	.main_title{
 		font: 800 58px/80px "Nunito", sans-serif;

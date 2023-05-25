@@ -200,11 +200,11 @@ header {
 	cursor: pointer;
 }
 main{
-	background:url(../img/main.jpg) center/cover no-repeat;
 	width: 100%;
 	min-width: 320px;
-	position: absolute;
-	top: 0;
+}
+main::before{
+	background:url(../img/main.jpg) center/cover no-repeat;
 }
 .main_contain{
 	max-width: 1150px;
@@ -295,7 +295,7 @@ main{
 		top: 32px;
 		right: 0;
 	}
-	main{
+	main::before{
 		background: url('../img/maindt.jpg') center / cover no-repeat;
 	}
 	.main_contain{

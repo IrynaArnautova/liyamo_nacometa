@@ -14,9 +14,10 @@ body {
 }
 
 header {
-	height: 150px;
+	height: 50px;
 	margin: 0 auto;
 	position: relative;
+	z-index: 10;
 }
 
 .header_block {
@@ -198,7 +199,61 @@ header {
 .header_burger:hover {
 	cursor: pointer;
 }
+main{
+	width: 100%;
+	min-width: 320px;
+}
+main::before {
+	content: "";
+	background:url(../img/main.jpg) center/cover no-repeat;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-width: 320px;
+	min-height: 330px;
+}
+.main_contain{
+	max-width: 1150px;
+	margin: 33px auto 8px;
+	padding: 20px;
+	position: relative;
+}
+.main_title{
+	color: white;
+	font: 700 40px/50px "Nunito", sans-serif;
+	letter-spacing: 0.2px;
+}
+.main_subtitle{
+	color: white;
+	font: 600 14px/24px "Nunito", sans-serif;
+	letter-spacing: 0.2px;
+	min-width: 260px;
+	width: 300px;
 
+}
+.main_button{
+	max-width: 340px;
+	width: 100%;
+	height: 50px;
+	background: #03BAFE;
+	border-radius: 5px;
+	margin-top: 30px;
+	color: white;
+	font: 700 14px/24px "Nunito", sans-serif;
+	cursor: pointer;
+}
+.main_button-video{
+	font: 600 14px/24px "Nunito", sans-serif;
+	color: white;
+	margin-left: 23px;
+	border-radius: 5px;
+	min-width: 136px;
+	height: 50px;
+	background: none;
+	border: 1px solid white;
+	display: none;
+	cursor: pointer;
+}
 @media (min-width: 991px) {
 	body {
 		width: 100%;
@@ -247,6 +302,26 @@ header {
 		top: 32px;
 		right: 0;
 	}
+	main::before{
+		background: url('../img/maindt.jpg') center / cover no-repeat;
+		min-height: 500px;
+	}
+	.main_contain{
+		margin: 74px auto 60px;
+	}
+	.main_title{
+		font: 800 58px/80px "Nunito", sans-serif;
+	}
+	.main_subtitle{
+		font: 700 24px/32px "Nunito", sans-serif;
+		width: 500px;
+	}
+	.main_button{
+		font: 700 14px/28px "Nunito", sans-serif;
+	}
+	.main_button-video{
+		display: inline;
+	}
 }
 @media (min-width: 1200px){
 	header {
@@ -261,4 +336,5 @@ header {
 	.header_lang{
 		margin-left: 25px;
 	}
+	
 }

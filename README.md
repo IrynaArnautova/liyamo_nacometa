@@ -1,1 +1,0 @@
-# liyamo_nacometa

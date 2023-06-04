@@ -18,7 +18,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Montserrat:wght@600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,800&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -53,14 +53,63 @@
 		<div class="header_burger header_js-burger"><span></span></div>
 	</header>
 	<main>
-		<div class="main_contain"><h1 class="main_title">€ 466 320 000</h1>
+		<div class="main_contain">
+			<h1 class="main_title">€ 466 320 000</h1>
 			<p class="main_subtitle">собрано на платформе Nakometa.com.
 				Здесь делятся мечтами и собирают по € 12 250.
 				Соберите на мечту и вы!</p>
 			<button class="main_button">Начать сбор средств</button>
-			<button class="main_button-video"> Смотреть видео</button></div>
+			<button class="main_button-video"> Смотреть видео</button>
+		</div>
 	</main>
+	<section class="dreamer">
+		<div class="dreamer_wrapper">
+			<div class="dreamer-header">
+				<h1 class="dreamer_title">Самые активные мечтатели</h1>
+				<button class="dreamer-header_button">Показать все мечты</button>
+			</div>
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="swiper_img" src="img/dreamer.jpg" alt="">
+						<div class="swiper-flex"><h2 class="swiper-slide_title">Помочь Ирине купить квартиру</h2>
+							<h3 class="swiper-slide_subtitle">Всем привет! Меня зовут Ирина и я хочу помочь своей дочери
+								купить
+								квартиру. Что-то мы собираем своими силами, но...</h3>
+							<p class="swiper-slide_timedonation">Последнее пожертвование 20 мин назад</p>
+							<img class="swiper_linedonate" src="svg/linestatus.svg" alt="">
+							<p class="swiper_slide-donate">€ 11.520 собрано <span class="swiper_span">из € 15.000</span>
+							</p></div>
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper_img" src="img/balet.jpg" alt="">
+						<div class="swiper-flex"><h2 class="swiper-slide_title">Открыть балетную школу</h2>
+							<h3 class="swiper-slide_subtitle">Здравствуйте! Меня зовут Инга и я пол жизни отдала балету.
+								Сейчас
+								чувствую,
+								что хочу делиться этим с молодым...</h3>
+							<p class="swiper-slide_timedonation">Последний перевод 35 мин назад</p>
+							<img class="swiper_linedonate" src="svg/linestatus.svg" alt="">
+							<p class="swiper_slide-donate">€ 4 820 собрано<span class="swiper_span">из € 5.000</span> </p></div>
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper_img" src="img/bear.png" alt="">
+						<div class="swiper-flex"><h2 class="swiper-slide_title">Хочу побывать на северном полюсе</h2>
+							<h3 class="swiper-slide_subtitle">Всем привет! Меня зовут Марк и я хочу отправиться в
+								путешествие на северный полюс... </h3>
+							<p class="swiper-slide_timedonation">Последнее пожертвование 10 мин назад</p>
+							<img class="swiper_linedonate" src="svg/linestatus.svg" alt="">
+							<p class="swiper_slide-donate">€ 2700 собрано <span class="swiper_span">из € 3500</span> </p></div>
+					</div>
+				</div>
+			</div>
+			<button class="dreamer_button">Показать все мечты</button>
+		</div>
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
+
 </body>
 
 </html>

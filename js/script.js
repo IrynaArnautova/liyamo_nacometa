@@ -28,3 +28,5 @@ burger.addEventListener('click', () => {
 	header.classList.toggle('header-active')
 	lang.classList.toggle('base_dropdown-active')
 });
+
+

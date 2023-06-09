@@ -262,7 +262,6 @@ main::before {
 .dreamer-header{
 	display: flex;
 	justify-content: space-between;
-	padding: 20px;
 }
 
 .dreamer_title{
@@ -272,10 +271,11 @@ main::before {
 	min-width: 250px;
 }
 
-.swiper-slide{
-	margin:20px 5px;
+.dreamer_swiper-item{
+	margin:20px 10px;
 	min-width: 220px;
-	border-radius: 20px;
+	border-radius: 40px;
+	overflow: hidden;
 	background: white;
 }
 .swiper-flex{
@@ -286,7 +286,6 @@ main::before {
 }
 .swiper_img{
     width: 100%;
-    border-radius: 20px;
 }
 .swiper-slide_title{
 	font: 700 14px/19px "Nunito", sans-serif;
@@ -316,16 +315,17 @@ main::before {
 	margin-top: 10px;
 }
 .dreamer_button ,.dreamer-header_button{
-	min-width: 240px;
+	width: 90%;
 	height: 50px;
 	display: block;
-	margin: 20px auto;
+	margin: 0 auto;
 	border: #03BAFE solid 1px;
 	border-radius: 5px;
 	color: #03BAFE;
+	font: 700 14px/28px "Nunito", sans-serif;
+	letter-spacing: 0.2px;
 }
 .dreamer-header_button{
-	margin: 50px 0 100px;
 	display: none;
 }
 @media (min-width: 991px) {
@@ -411,8 +411,13 @@ main::before {
 	.header_lang{
 		margin-left: 25px;
 	}
+	.dreamer-header{
+		width: 1150px;
+		margin: 0 auto;
+		padding: 20px;
+	}
 	.dreamer_wrapper{
-		max-width: 1160px;
+		max-width: 1150px;
 		width: 100%;
 		margin: 0 auto;
 	}
@@ -420,13 +425,12 @@ main::before {
 		padding: 52px 0 25px 0;
 		font: 700 40px/50px "Nunito", sans-serif;
 	}
-	.swiper-slide{
-		width: 360px!important;
+	.dreamer_swiper-item{
+		max-width: 360px;
 		height: 491px;
+		margin: 0 20px;
 	}
-	.swiper-wrapper{
-		margin-left: 800px;
-	}
+	
 	.swiper_img{
 		width: 360px;
 	}
@@ -449,5 +453,8 @@ main::before {
 	}
 	.dreamer-header_button{
 		display: block;
+		width: 191px;
+		margin: 52px 0 25px 100px;
 	}
+	
 }

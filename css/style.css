@@ -257,9 +257,8 @@ main::before {
 	width: 100%;
 	min-width: 320px;
 	padding-bottom: 10px;
-	background: #E5E5E5;
 }
-.dreamer-header{
+.dreamer_header{
 	display: flex;
 	justify-content: space-between;
 }
@@ -273,18 +272,15 @@ main::before {
 
 .dreamer_swiper-item{
 	margin:20px 10px;
-	min-width: 220px;
-	border-radius: 40px;
+	min-width: 240px;
+	border-radius: 20px;
 	overflow: hidden;
-	background: white;
+	box-shadow: 0 24px 32px 0 rgba(50, 50, 71, 0.05);
 }
-.swiper-flex{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 20px;
+.dreamer_swiper-flex{
+	padding: 10px;
 }
-.swiper_img{
+.dreamer_swiper-img{
     width: 100%;
 }
 .swiper-slide_title{
@@ -293,28 +289,37 @@ main::before {
 
 .swiper-slide_subtitle{
 	font: 400 11px/15px "Nunito", sans-serif;
-	margin-top: 10px;
+	margin-top: 5px;
 }
 .swiper-slide_timedonation{
 	font: 400 10px/13px "Nunito", sans-serif;
 	opacity: 0.5;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .swiper_slide-donate{
 	font: 400 12px/24px "Nunito", sans-serif;
 	letter-spacing: 0.1px;
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 .swiper_span{
-	opacity: 0.5;
+	color: #999999;
 }
 .swiper_linedonate{
 	width: 100%;
-	margin-top: 10px;
+	background: #03BAFE;
+	border-radius: 10px;
+	height: 5px;
+	margin-top: 5px;
 }
-.dreamer_button ,.dreamer-header_button{
+.swiper_linedonate-span{
+	width: 40%;
+	color: blue;
+	height: 5px;
+	display: block;
+}
+.base-button ,.dreamer_button-button ,.dreamer_header-button{
 	width: 90%;
 	height: 50px;
 	display: block;
@@ -324,8 +329,9 @@ main::before {
 	color: #03BAFE;
 	font: 700 14px/28px "Nunito", sans-serif;
 	letter-spacing: 0.2px;
+	background: none;
 }
-.dreamer-header_button{
+.dreamer_header-button{
 	display: none;
 }
 @media (min-width: 991px) {
@@ -411,15 +417,16 @@ main::before {
 	.header_lang{
 		margin-left: 25px;
 	}
-	.dreamer-header{
+	.dreamer_header{
 		width: 1150px;
 		margin: 0 auto;
 		padding: 20px;
 	}
-	.dreamer_wrapper{
+	.dreamer-wrapper{
 		max-width: 1150px;
 		width: 100%;
 		margin: 0 auto;
+		
 	}
 	.dreamer_title{
 		padding: 52px 0 25px 0;
@@ -427,11 +434,15 @@ main::before {
 	}
 	.dreamer_swiper-item{
 		max-width: 360px;
+		width: 100%;
 		height: 491px;
 		margin: 0 20px;
+		margin-bottom: 20px;
 	}
-	
-	.swiper_img{
+	.dreamer_swiper-flex{
+		padding: 20px;
+	}
+	.dreamer_swiper-img{
 		width: 360px;
 	}
 	.swiper-slide_title{
@@ -441,17 +452,23 @@ main::before {
 	.swiper-slide_subtitle{
 		font: 400 16px/24px "Nunito", sans-serif;
 		width: 320px;
+		margin-top: 10px;
 	}
 	.swiper-slide_timedonation{
 		font: 400 16px/24px "Nunito", sans-serif;
+		margin-top: 20px;
+	}
+	.swiper_linedonate{
+		margin-top: 10px;
 	}
 	.swiper_slide-donate{
 		font: 400 16px/24px "Nunito", sans-serif;
+		margin-top: 10px;
 	}
 	.dreamer_button{
 		display: none;
 	}
-	.dreamer-header_button{
+	.dreamer_header-button{
 		display: block;
 		width: 191px;
 		margin: 52px 0 25px 100px;

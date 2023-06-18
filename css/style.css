@@ -283,7 +283,7 @@ main::before {
 .dreamer_swiper-img{
     width: 100%;
 	object-fit:fill;
-	max-height: 228px;
+	max-height: 150px;
 }
 .swiper_slide-title{
 	font: 700 14px/19px "Nunito", sans-serif;
@@ -462,6 +462,7 @@ main::before {
 	}
 	.dreamer_swiper-img{
 		width: 360px;
+		max-height: 228px;
 	}
 	.swiper_slide-title{
 		font: 700 16px/24px "Nunito", sans-serif;

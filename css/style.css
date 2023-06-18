@@ -282,7 +282,7 @@ main::before {
 }
 .dreamer_swiper-img{
     width: 100%;
-	object-fit:contain;
+	object-fit:fill;
 	max-height: 228px;
 }
 .swiper_slide-title{

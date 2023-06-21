@@ -28,3 +28,15 @@ burger.addEventListener('click', () => {
 	header.classList.toggle('header-active')
 	lang.classList.toggle('base_dropdown-active')
 });
+
+const swiper = new Swiper('.swiper', {
+	loop: true,
+	slidesPerView: 1.33,
+	centeredSlides: true,
+	breakpoints: {
+		1200: {
+			centeredSlides: false,
+			slidesPerView: 3,
+		}
+	}
+});

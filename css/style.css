@@ -348,6 +348,94 @@ main::before {
 .dreamer_header-button {
 	display: none;
 }
+
+.assistance{
+	margin-top: 35px;
+}
+.asistance_wrapper{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+.assistance_title{
+	background:rgba(235, 250, 255, 0.7);
+	border-radius: 20px;
+	padding: 17px 20px;
+	text-align: center;
+}
+.assistance_title-span{
+	font: 700 16px/24px "Manrope", sans-serif;
+	letter-spacing: 0.1;
+	background: linear-gradient(180deg, #03BAFE 0%, #0068FF 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.assistance_subtitle{
+	font: 700 21px/24px "Nunito", sans-serif;
+	letter-spacing: 0.1;
+	margin-top: 35px;
+	text-align: left;
+}
+
+.assistance_picture{
+	background: url("/img/assistance.jpg") no-repeat;
+}
+.assistance_info{
+	margin-top: 30px;
+}
+.assistance_info-stats{
+	border: 1px solid rgba(3, 186, 254, 0.15);
+	border-radius: 20px;
+	padding: 15px 20px;
+}
+.assistance_info-stats-title{
+	font:600 18px/22px "Nunito", sans-serif;
+	letter-spacing: 0.1;
+}
+.assistance_info-stats-subtitle{
+	font:700 21px/24px "Nunito", sans-serif;
+	color: #03BAFE;
+	margin-top: 15px;
+}
+.assistance_info-stats-text{
+	font:600 14px/24px "Nunito", sans-serif;
+	letter-spacing: 0.2;
+	color: rgba(153, 153, 153, 1);
+	margin-top: 15px;
+}
+.assistance_info-instruction{
+	background: rgba(235, 250, 255, 1);
+	padding: 20px;
+	border-radius: 20px;
+	margin-top: 20px;
+}
+.assistance_info-title{
+	font:700 21px/24px "Nunito", sans-serif;
+	letter-spacing: 0.1;
+	margin-bottom: 15px;
+}
+.assistance_info-item{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+.assistance_info-item-text{
+	margin-left: 15px;
+	font:400 12px/24px "Nunito", sans-serif;
+	letter-spacing: 0.1;
+}
+.assistance_info-item-link{
+	color: #03BAFE;
+	font:700 12px/24px "Nunito", sans-serif;
+	letter-spacing: 0.1;
+}
+.orange{
+	background: orange;
+	color: #000;
+	width: 100%;
+	border: none;
+	margin-top: 20px;
+}
 @media (min-width: 991px) {
 	body {
 		width: 100%;

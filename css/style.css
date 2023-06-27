@@ -365,14 +365,14 @@ main::before {
 }
 .assistance_title-span{
 	font: 700 16px/24px "Manrope", sans-serif;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1px;
 	background: linear-gradient(180deg, #03BAFE 0%, #0068FF 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 .assistance_subtitle{
 	font: 700 21px/24px "Nunito", sans-serif;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1px;
 	margin-top: 35px;
 	text-align: left;
 }
@@ -390,7 +390,7 @@ main::before {
 }
 .assistance_info-stats-title{
 	font:600 18px/22px "Nunito", sans-serif;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1px;
 }
 .assistance_info-stats-subtitle{
 	font:700 21px/24px "Nunito", sans-serif;
@@ -399,7 +399,7 @@ main::before {
 }
 .assistance_info-stats-text{
 	font:600 14px/24px "Nunito", sans-serif;
-	letter-spacing: 0.2;
+	letter-spacing: 0.2px;
 	color: rgba(153, 153, 153, 1);
 	margin-top: 15px;
 }
@@ -409,25 +409,25 @@ main::before {
 	border-radius: 20px;
 	margin-top: 20px;
 }
-.assistance_info-title{
+.assistance_instruction-title{
 	font:700 21px/24px "Nunito", sans-serif;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1px;
 	margin-bottom: 15px;
 }
-.assistance_info-item{
+.assistance_instruction-item{
 	display: flex;
 	align-items: center;
 	margin-top: 10px;
 }
-.assistance_info-item-text{
+.assistance_instruction-item-text{
 	margin-left: 15px;
 	font:400 12px/24px "Nunito", sans-serif;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1px;
 }
-.assistance_info-item-link{
+.assistance_instruction-item-link{
 	color: #03BAFE;
 	font:700 12px/24px "Nunito", sans-serif;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1px;
 }
 .orange{
 	background: orange;
@@ -435,6 +435,9 @@ main::before {
 	width: 100%;
 	border: none;
 	margin-top: 20px;
+}
+.blue{
+	display: none;
 }
 @media (min-width: 991px) {
 	body {
@@ -572,5 +575,51 @@ main::before {
 	}
 	.dreamer_bottom-button {
 		display: none;
+	}
+	.asistance_wrapper{
+		max-width: 1150px;
+	}
+	.assistance_title-span{
+		font: 700 24px/32px "Nunito", sans-serif;
+	}
+	.assistance_subtitle{
+		font: 700 40px/50px "Nunito", sans-serif;
+		letter-spacing: 0.2px;
+		text-align: center;
+	}
+	.assistance_block{
+		display: flex;
+	}
+	
+	.assistance_info-stats-title{
+		font: 700 24px/32px "Nunito", sans-serif;
+	}
+	.assistance_info-stats-subtitle{
+		font: 700 24px/32px "Nunito", sans-serif;
+	}
+	.assistance_info-stats-text{
+		font: 700 16px/24px "Nunito", sans-serif;
+	}
+	.assistance_instruction-title{
+		font: 700 24px/32px "Nunito", sans-serif;
+	}
+	.assistance_instruction-item-text{
+		font: 600 16px/24px "Nunito", sans-serif;
+	}
+	.assistance_instruction-item-link{
+		font: 600 16px/24px "Nunito", sans-serif;
+	}
+	.assistance_button{
+		display: flex;
+	}
+	.orange{
+		margin-right: 11px;
+	}
+
+	.blue{
+		display: block;
+		margin-top: 20px;
+		background: rgba(3, 186, 254, 1);
+		color: #fff;
 	}
 }

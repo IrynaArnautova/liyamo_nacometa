@@ -378,8 +378,98 @@ main::before {
 }
 
 .assistance_picture{
-	background: url("/img/assistance.jpg") no-repeat;
+	background: url("/img/assistance.jpg") center no-repeat;
+	height: 340px;
+	width: 251px;
+	position: relative;
+	margin: 0 auto;
+	padding: 5px;
 }
+.assistance_block-text{
+	position: absolute;
+	background: #ffffff;
+	box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.07);
+	padding:5px 10px;
+	height: 38px;
+}
+.assistance_block-text-title{
+	font: 700 12px/16px "Nunito", sans-serif;
+	letter-spacing: 0.1px;
+}
+.assistance_block-text-subtitle{
+	font: 400 7px/10px "Nunito", sans-serif;
+	letter-spacing: 0.1px;
+}
+.assistance_block1{
+	top: 115px;
+	left: 145px;
+	border-radius: 15px 15px 15px 0px;
+	white-space: nowrap;
+}
+
+.assistance_block2{
+	top: 120px;
+	left: -45px;
+	border-radius: 15px 15px 0px 15px;
+}
+.assistance_block3{
+	top: 180px;
+	left: 13px;
+	border-radius: 15px 0px 15px 15px;
+	z-index: 50;
+	width: 100px;
+}
+.assistance_block4{
+	top: 180px;
+	left: 175px;
+	white-space: nowrap;
+	border-radius: 15px 15px 15px 0px;
+}
+.assistance_block5{
+	top: 260px;
+	border-radius: 15px 0px 15px 15px;
+}
+.assistance_block-text-span{
+	position: absolute;
+	left: -9px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid white;
+	border-radius: 20px;
+}
+.right-span{
+	left: 115px;
+}
+.right-span2{
+	left: 117px;
+	top: -7px;
+}
+.assistance_picture-img{
+	width: 25px;
+}
+.assistance_picture-img-center{
+	width: 35px;
+}
+.assistance_picture-icon{
+	position: absolute;
+	top: 88px;
+	left: 75px;
+}
+.assistance_picture-icon2{
+	position: absolute;
+	top: 152px;
+	left: 107px;
+}
+.assistance_picture-icon3{
+	position: absolute;
+	top: 250px;
+	left:155px;
+}
+.assistance_picture-icon4{
+	position: absolute;
+	display: none;
+}
+
 .assistance_info{
 	margin-top: 30px;
 }
@@ -578,6 +668,7 @@ main::before {
 	}
 	.asistance_wrapper{
 		max-width: 1150px;
+		width: 100%;
 	}
 	.assistance_title-span{
 		font: 700 24px/32px "Nunito", sans-serif;

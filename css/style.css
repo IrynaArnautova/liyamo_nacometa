@@ -255,7 +255,6 @@ main::before {
 .dreamer {
 	width: 100%;
 	min-width: 320px;
-	padding-bottom: 10px;
 }
 .dreamer_header {
 	display: flex;
@@ -374,11 +373,10 @@ main::before {
 	font: 700 21px/24px "Nunito", sans-serif;
 	letter-spacing: 0.1px;
 	margin-top: 35px;
-	text-align: left;
 }
 
 .assistance_picture{
-	background: url("/img/assistance.jpg") center no-repeat;
+	background: url("../img/assistance.jpg") center no-repeat;
 	height: 340px;
 	width: 251px;
 	position: relative;
@@ -437,8 +435,13 @@ main::before {
 	border: 1px solid white;
 	border-radius: 20px;
 }
+
+.left_span{
+	background: rgba(255, 255, 255, 0.5);
+}
 .right-span{
 	left: 115px;
+	background: rgba(255, 255, 255, 0);
 }
 .right-span2{
 	left: 117px;
@@ -721,7 +724,7 @@ main::before {
 		width: 700px;
 		height: 562px;
 		margin: 147px 62px auto auto;
-		background: url("/img/assistance_dt.jpg") center no-repeat;
+		background: url("../img/assistance_dt.jpg") center no-repeat;
 	}
 
 	.assistance_picture-img{

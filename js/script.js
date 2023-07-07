@@ -50,13 +50,18 @@ const swiperReviews = new Swiper('.concept_swiper-reviews', {
 	loop: true,
 	slidesPerView: 1,
 	centeredSlides: true,
-	pagination: '.swiper-pagination',
-	nextButton: '.swiper-button-next',
-	prevButton: '.swiper-button-prev',
+	navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+		clickable: true,
+    },
 	breakpoints: {
 		1200: {
-			centeredSlides: false,
 			slidesPerView: 3,
 		}
 	}
+
 });

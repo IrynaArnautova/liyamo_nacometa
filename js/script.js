@@ -39,4 +39,24 @@ const swiper = new Swiper('.swiper', {
 			slidesPerView: 3,
 		}
 	}
+
+});
+const swiperConcept = new Swiper('.concept_swiper-info', {
+	loop: true,
+	slidesPerView: 1.5,
+});
+
+const swiperReviews = new Swiper('.concept_swiper-reviews', {
+	loop: true,
+	slidesPerView: 1,
+	centeredSlides: true,
+	pagination: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	breakpoints: {
+		1200: {
+			centeredSlides: false,
+			slidesPerView: 3,
+		}
+	}
 });

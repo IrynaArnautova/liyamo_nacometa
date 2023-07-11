@@ -49,7 +49,7 @@ const swiperConcept = new Swiper('.concept_swiper-info', {
 const swiperReviews = new Swiper('.concept_swiper-reviews', {
 	loop: true,
 	slidesPerView: 1,
-	centeredSlides: true,
+	centeredSlides:true,
 	navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -60,7 +60,22 @@ const swiperReviews = new Swiper('.concept_swiper-reviews', {
     },
 	breakpoints: {
 		1200: {
-			slidesPerView: 3,
+			slidesPerView: 3.15,
+		}
+	}
+
+});
+const swiperVideo = new Swiper('.concept_video', {
+	loop: true,
+	slidesPerView: 2,
+	centeredSlides:true,
+	navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+	breakpoints: {
+		1200: {
+			slidesPerView: 4,
 		}
 	}
 

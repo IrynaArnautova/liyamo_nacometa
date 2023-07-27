@@ -49,15 +49,15 @@ const swiperConcept = new Swiper('.concept_swiper-info', {
 const swiperReviews = new Swiper('.concept_swiper-reviews', {
 	loop: true,
 	slidesPerView: 1,
-	centeredSlides:true,
+	spaceBetween: 40,
 	navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
+		nextEl: '.concept_people-next',
+		prevEl: '.concept_people-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
 		clickable: true,
-    },
+	},
 	breakpoints: {
 		1200: {
 			slidesPerView: 3.15,
@@ -67,16 +67,32 @@ const swiperReviews = new Swiper('.concept_swiper-reviews', {
 });
 const swiperVideo = new Swiper('.concept_video', {
 	loop: true,
-	slidesPerView: 2,
-	centeredSlides:true,
+	slidesPerView: 1,
+	spaceBetween: 15,
 	navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+		nextEl: '.concept_video-button-next',
+		prevEl: '.concept_video-button-prev',
+	},
 	breakpoints: {
 		1200: {
-			slidesPerView: 4,
+			slidesPerView: 4.5,
+		},
+		992: {
+			slidesPerView: 3.5,
+		},
+		768: {
+			slidesPerView: 2.5,
+		},
+		576: {
+			slidesPerView: 1.5,
+		},
+		320: {
+			slidesPerView: 1,
 		}
 	}
+
+
+
+
 
 });

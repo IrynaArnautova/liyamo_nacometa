@@ -609,6 +609,7 @@ main::before {
 .concept_people-swiper-subtitle{
 	font:400 12px/24px "Nunito", sans-serif;
 	letter-spacing: 0.1px;
+	height: 200px;
 }
 .concept_people-swiper-user{
 	font:400 16px/22px "Nunito", sans-serif;
